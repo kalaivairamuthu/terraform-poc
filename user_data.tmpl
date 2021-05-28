@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/' -i /etc/ssh/sshd_config
+sudo systemctl restart sshd
+sudo service sshd restart
+
+#create ubuntu user and its password
+sudo useradd -d /home/centos centos
+sudo echo "centos:password" | sudo chpasswd
+#sudo hostnamectl set-hostname --static ${hostname}
