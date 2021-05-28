@@ -24,9 +24,9 @@ variable "KeyName" {
 }
 
 variable "AccessKey" {
- default = "AKIAXS5MRI7SGYARKR5I"
+ default = ""
 }
 
 variable "SecretKey" {
- default = "lC1ZROQJjjFiDzyeNUrRz/zeWPSy8rQuMpGWPgeZ"
+ default = ""
 }
