@@ -86,6 +86,12 @@ data "template_file" "user_data" {
   )
 }
 
+resource "aws_ami_from_instance" "default" {
+  name               = "centos-ami"
+  source_instance_id = "${element(aws_instance.default.*.id, 0)}"
+}
+
+
 // A variable for extracting the external ip of the instance
 output "ip" {
   value = aws_instance.default.public_ip
