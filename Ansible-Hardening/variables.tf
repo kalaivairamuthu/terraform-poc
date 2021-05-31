@@ -1,5 +1,5 @@
 # Declare TF variables
-variable "Region" {
+variable "AWS_Region" {
   default = "us-east-2"
 }
 variable "AvailabilityZone" {
